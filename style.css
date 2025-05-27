@@ -8,6 +8,9 @@ img {
 }
 
 body {
+}
+
+.desktop {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,55 +18,132 @@ body {
   width: 100dvw;
 
   background-color: rgba(0, 0, 0);
-  background-image: url("https://i.ibb.co/DHjKfND2/macos-monterey-stock-green-light-layers-5k-8k-7680x7680-5891.jpg");
+  /*   background-image: url("https://i.ibb.co/DHjKfND2/macos-monterey-stock-green-light-layers-5k-8k-7680x7680-5891.jpg"); */
+  background-image: url("https://512pixels.net/downloads/macos-wallpapers-6k/14-Sonoma-Light.jpg");
   background-size: cover;
   background-position: center;
+}
+.launchpad {
+  height: 100dvh;
+  width: 100dvw;
+  background: rgba(0, 0, 0, 0.1);
+  /*   backdrop-filter: blur(3px); */
+  /*   -webkit-backdrop-filter: blur(3px); */
+
+  .app-grid {
+    width: 500px;
+    height: 500px;
+
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    p {
+      color: white;
+      font-size: 10px;
+    }
+  }
+
+  .icon {
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 22%;
+  }
 }
 
 .dock {
   position: absolute;
   bottom: 20px;
   background-color: rgba(255, 255, 255, 0.2);
-
-  height: 60px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  height: 50px;
 
   border-radius: 15px;
   display: flex;
   align-items: end;
   justify-content: center;
-}
-.icon {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 22%;
-  transition: width, height, cubic-bezier(0.25, 1, 0.5, 1) 100ms;
-  transform-origin: bottom;
-  &:hover {
-    width: 90px;
-    height: 90px;
-    top: -15px;
-    + img {
+  transition: all 300ms;
+  .icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    /*     border-radius: 22%; */
+    transition: width, height, cubic-bezier(0.25, 1, 0.5, 1) 100ms;
+    transform-origin: bottom;
+    &:hover {
       width: 80px;
       height: 80px;
-          top: -8px;
-      
+      top: -15px;
       + img {
+        width: 70px;
+        height: 70px;
+        top: -8px;
+
+        + img {
+          width: 60px;
+          height: 60px;
+          top: -5px;
+        }
+      }
+    }
+
+    &:has(+ img:hover) {
       width: 70px;
       height: 70px;
-          top: -5px;
+      top: -8px;
     }
+    &:has(+ img + img:hover) {
+      width: 60px;
+      height: 60px;
+      top: -5px;
     }
   }
-  
-  &:has(+ img:hover) {
-    width: 80px;
-    height: 80px;
-        top: -8px;
+}
+
+@keyframes expand {
+  from {
+    width: 0;
   }
-  &:has(+ img  +img:hover) {
-    width: 70px;
-    height: 70px;
-        top: -5px;
+  to {
+    width: 50px;
   }
+}
+
+@keyframes contract {
+  from {
+    width: 50px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.expanding {
+  animation: 300ms expand both;
+}
+
+.contracting {
+  animation: 300ms contract both;
+}
+
+.icon-ghost {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  animation: 100ms expand both;
+  /*   margin: 5px; */
 }

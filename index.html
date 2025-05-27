@@ -2,33 +2,98 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>macOS-dock</title>
+  <title>macOS-dock-drag-and-drop </title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="dock">
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/finder-2021-09-10.png?rf=1024" alt="finder icon" title="finder">
+<div class='desktop'>
+  <div class='launchpad'>
 
-  <img class="icon" src="https://i.ibb.co/GfBpfpZn/launcpad-1024x1024x32.png" alt="launhcpad icon" title="Launchpad">
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/safari-2021-06-02.png?rf=1024" alt="safari icon" title="safari">
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/facetime-2021-04-30.png?rf=1024" alt="facetime icon" title="facetime">
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/photos-2021-05-28.png?rf=1024" alt="photos icon" title="photos">
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/siri-2021-09-10.png?rf=1024" alt="siri icon" title="siri">
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/find-my-2021-04-30.png?rf=1024" alt="find my icon" title="find my">
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/system-preferences-2021-06-03.png?rf=1024" alt="settings icon" title="settings">
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/notes-2021-05-25.png?rf=1024" alt="notes icon" title='notes'>
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/terminal-2021-06-03.png?rf=1024" alt="terminal icon" title='terminal'>
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/calendar-2021-04-29.png?rf=1024" alt="calendar icon" border="0">
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/calculator-2021-04-29.png?rf=1024" alt="calculator icon" title='calculator'>
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/app-store-2021-04-22.png?rf=1024" alt="app store icon" title='app store'>
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/music-2021-05-25.png?rf=1024" alt="music icon" title='Music'>
-  <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/maps-2023-05-19.png?rf=1024" alt="maps icon" title='maps'>
-  <img class="icon" src="https://i.ibb.co/ymCpwq9D/bin-1024x1024x32.png" alt="bin icon" title='Bin'>
+    <div class='app-grid'>
+      <div class='app'> <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/finder-2021-09-10.png?rf=1024" alt="finder icon" title="finder">
+        <p>Finder</p>
+      </div>
+      <div class='app'>
+        <img class="icon" draggable='true' src="https://i.ibb.co/GfBpfpZn/launcpad-1024x1024x32.png" alt="launhcpad icon" title="Launchpad">
+        <p>Launchpad</p>
+      </div>
+      <div class='app'>
+        <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/safari-2021-06-02.png?rf=1024" alt="safari icon" title="safari">
+        <p>Safari</p>
+      </div>
+      <div class='app'>
+        <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/facetime-2021-04-30.png?rf=1024" alt="facetime icon" title="facetime">
+        <p>Facetime</p>
+      </div>
+      <div class='app'>
+        <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/photos-2021-05-28.png?rf=1024" alt="photos icon" title="photos">
+        <p>Photos</p>
+      </div>
+      <div class='app'>
+        <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/siri-2021-09-10.png?rf=1024" alt="siri icon" title="siri">
+        <p>Siri</p>
+      </div>
+      <div class='app'>
+        <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/find-my-2021-04-30.png?rf=1024" alt="find my icon" title="find my">
+        <p>Find My</p>
+      </div>
 
+      <div class='app'>
+
+        <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/system-preferences-2021-06-03.png?rf=1024" alt="settings icon" title="settings">
+        <p>Settings</p>
+      </div>
+      <div class='app'> <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/notes-2021-05-25.png?rf=1024" alt="notes icon" title='notes'>
+        <p>Notes</p>
+      </div>
+      <div class='app'> <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/terminal-2021-06-03.png?rf=1024" alt="terminal icon" title='terminal'>
+        <p>Terminal</p>
+      </div>
+
+      <div class='app'>
+        <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/calendar-2021-04-29.png?rf=1024" alt="calendar icon" border="0">
+        <p>Calendar</p>
+      </div>
+      <div class='app'> <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/calculator-2021-04-29.png?rf=1024" alt="calculator icon" title='calculator'>
+        <p>Calculator</p>
+      </div>
+      <div class='app'><img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/app-store-2021-04-22.png?rf=1024" alt="app store icon" title='app store'>
+        <p>App Store</p>
+      </div>
+
+      <div class='app'> <img class="icon" id='musicIcon' draggable='true' src="https://cdn.jim-nielsen.com/macos/512/music-2021-05-25.png?rf=1024" alt="music icon" title='Music'>
+        <p>Music</p>
+      </div>
+      <div class='app'> <img class="icon" draggable='true' src="https://cdn.jim-nielsen.com/macos/512/maps-2023-05-19.png?rf=1024" alt="maps icon" title='maps'>
+        <p>Maps</p>
+      </div>
+      <div class='app'> <img class="icon" draggable='true' src="https://i.ibb.co/ymCpwq9D/bin-1024x1024x32.png" alt="bin icon" title='Bin'>
+        <p>Bin</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div id='dock' class="dock">
+    <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/finder-2021-09-10.png?rf=1024" alt="finder icon" title="finder">
+
+    <img class="icon" src="https://i.ibb.co/GfBpfpZn/launcpad-1024x1024x32.png" alt="launhcpad icon" title="Launchpad">
+    <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/safari-2021-06-02.png?rf=1024" alt="safari icon" title="safari">
+    <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/facetime-2021-04-30.png?rf=1024" alt="facetime icon" title="facetime">
+    <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/photos-2021-05-28.png?rf=1024" alt="photos icon" title="photos">
+
+    <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/calculator-2021-04-29.png?rf=1024" alt="calculator icon" title='calculator'>
+    <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/app-store-2021-04-22.png?rf=1024" alt="app store icon" title='app store'>
+    <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/music-2021-05-25.png?rf=1024" alt="music icon" title='Music'>
+    <img class="icon" src="https://cdn.jim-nielsen.com/macos/512/maps-2023-05-19.png?rf=1024" alt="maps icon" title='maps'>
+    <img class="icon" src="https://i.ibb.co/ymCpwq9D/bin-1024x1024x32.png" alt="bin icon" title='Bin'>
+
+  </div>
 </div>
 <!-- partial -->
-  
+  <script  src="./script.js"></script>
+
 </body>
 </html>
